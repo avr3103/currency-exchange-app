@@ -1,0 +1,71 @@
+.exchanger {
+  width: 500px;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  min-height: 320px;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .exchanger {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.center {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.left {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: flex-start;
+  visibility: hidden;
+}
+
+.right {
+  flex-basis: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exchange-btn {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--font-color);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.exchange-btn:hover {
+  background: var(--hover-color);
+}
+
+.switch-wallet {
+  background: url("../../assets/icons/switch-btn-icon.svg") 50% 50% no-repeat var(--primary-color);
+  border-radius: 2.5rem;
+  top: 9.6rem;
+  position: absolute;
+  margin: 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  color: var(--font-color);
+  border: none;
+}
+
+.delimiter {
+  border-bottom: 1px solid var(--font-color);
+  margin-bottom: 25px;
+}

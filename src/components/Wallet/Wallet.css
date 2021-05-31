@@ -1,0 +1,61 @@
+.wallet {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 15px;
+}
+
+.wallet .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.wallet-currency {
+  color: var(--font-color);
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.wallet-currency option {
+  font-size: 1.2rem;
+}
+
+.wallet-amount {
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+}
+
+.wallet-input {
+  background-color: transparent;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  width: 7rem;
+  text-align: right;
+  border: none;
+  margin-bottom: .625rem;
+  padding: .6em .7em;
+}
+
+.wallet-operation-sign {
+  font-size: 1.5rem;
+}
+
+.wallet-input:focus {
+  outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.wallet-exchange-result {
+  color: var(--font-color);
+  font-size: 1.5rem;
+  text-align: right;
+}
