@@ -63,7 +63,7 @@ const Exchanger: FC = (): JSX.Element => {
   const setInputValue = (val: string, rate: number, amount: number, wallet: string) => {
     const isCorrectInput = /^[\d]*\.?[\d]{0,2}$/.test(val);
     const res = Number(val) * rate;
-    const isOperationCorrect = checkOperation(+val, res, amount);
+    const isOperationCorrect = checkOperation(+val, res, amount, currencyFrom, currencyTo);
 
     setExchangeButton(isOperationCorrect);
 
@@ -77,8 +77,8 @@ const Exchanger: FC = (): JSX.Element => {
       if (isOperationCorrect) setValueFrom(toFixed(res));
     }
 
-    if (!valueFrom && valueTo) {
-      setValueTo('');
+    if (!val) {
+      clearInputs();
     }
   }
 
@@ -118,7 +118,7 @@ const Exchanger: FC = (): JSX.Element => {
   }
 
   return (
-    <div className='exchanger'>
+    <div data-testid='exchanger' className='exchanger'>
       <div className='header-row'>
         <div className='left' />
         <div className='center'>

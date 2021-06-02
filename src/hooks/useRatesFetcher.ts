@@ -17,7 +17,7 @@ export const useRatesFetcher = (): [Rates , boolean] => {
           setRates(res);
         }
 
-        id = setTimeout(start, 10000000);
+        id = setTimeout(start, REFRESH_TIME);
       })
     }
 

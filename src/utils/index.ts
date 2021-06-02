@@ -1,5 +1,5 @@
-import {KeyboardEvent} from 'react';
-import {CURRENCY_SYMBOLS} from '../constants';
+import { KeyboardEvent } from 'react';
+import { CURRENCY_SYMBOLS } from '../constants';
 
 export const getCurrencySymbol = (name: string) => (CURRENCY_SYMBOLS[name]);
 
@@ -17,8 +17,15 @@ export const toFixed = (num: number): number => {
   return getDot !== -1 ? +strRes.slice(0, (strRes.indexOf(".")) + 3) : num;
 }
 
-export const checkOperation = (val: number, result: number, amount: number): boolean => {
-  return !(result < 0.01 || val > amount);
+export const checkOperation = (
+  val: number,
+  result: number,
+  amount: number,
+  currencyFrom: string,
+  currencyTo: string
+): boolean =>
+{
+  return !(result < 0.01 || val > amount || currencyFrom === currencyTo);
 }
 
 
